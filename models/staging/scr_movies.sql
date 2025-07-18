@@ -1,5 +1,5 @@
 WITH raw_movies AS (
-    SELECT * FROM MOVIELENS.RAW.raw_movies
+    SELECT * FROM {{source('movieProject','r_movies')}}
 )
 SELECT
     movieId AS movie_id,
